@@ -1,0 +1,84 @@
+body{
+    background: linear-gradient(to right, #f8aaee ,rgb(174, 207, 223))
+}
+.menu{
+    margin: 0px;
+    height: 50px;
+    padding: 5px;
+    background-color: rgb(223, 223, 222);
+}
+.menu ul{
+   position: absolute;
+   list-style-type: none;  
+   display: flex;
+   margin: 0px;
+}
+   
+.menu ul li{
+    padding:0px 30px 30px 30px
+}
+
+.menu a{
+    text-decoration: none;
+    font-size: 40px;
+    color: rgb(24, 24, 24);
+}
+.active {
+    background-color:rgb(217, 254, 5);
+    padding:3px 10px 3px 10px;
+    border-radius: 25px;
+}
+.menu li:hover{
+
+transform: perspective(10px) scale(0.6);
+}
+.content img{
+    width: 60%;
+    height: 20%;
+    margin:10px 300px;
+}
+.content img:hover{
+    transform:scale(1.1)
+}
+.content h1{
+   color: #7d0202;
+   text-align: center;
+}
+.contact{
+    
+    border: 4px solid black;
+    text-align: center;
+    padding: 15px 10px;
+    margin: 2% 30%;
+    display: flex; 
+    flex-direction: column;       
+    align-items: center;  
+   
+}
+.contact input,textarea{
+         border: 3px solid black;
+         width: 70%;
+         padding: 5px 10px;
+         margin: 0;
+         border-radius: 5px;
+         font-size: 20px;
+         box-sizing: border-box;
+}
+input[type="submit"] {
+    background-color: rgb(245, 181, 126); 
+    color: rgb(21, 21, 21);                 
+    border: none;           
+    padding: 10px 20px;          
+    font-size: 16px;              
+    border-radius: 5px;    
+    width: 30%;      
+    cursor: pointer
+    
+}
+input[type="submit"]:hover {
+    background-color: darkorange; 
+}
+h2{
+    text-shadow: 2px 1px red;
+    font-size: 50px;
+}
