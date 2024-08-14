@@ -1,0 +1,24 @@
+1) explaining the html structure
+ inline--> takes the particular space eg :<span>
+ block---> takes a full block of space even though the content is small
+
+inline cannot contain a block but block can contain inline
+eg: <h1> block<span>inline</span></h1>
+
+different b/w form and div
+what is <form/>
+
+select tags is used to select along with the html 
+
+button
+use iframe to load their content into the web page
+eg: google map
+
+google ads
+
+javascript 
+
+re declare is possible in var not in let but update is possible
+const is for constant value it wont be change we do not able to update a const var
+
+a fun without the func name is called anonymous func

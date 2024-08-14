@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="input_id" >
+    <button onclick="input()">Submit</button>
+
+<script>
+    var inputElement = document.getElementById("input_id");
+    var id = inputElement.value.trim();
+    input = ()=>{
+        if(id ===""){
+            inputElement.style.border = "2px solid red";
+
+        }
+        else
+        {
+            inputElement.style.border = "none";
+
+        }
+    }
+</script>
+</body>
+</html>

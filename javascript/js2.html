@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label>enter some thing:  </label><input id= "input_id" type="text" placeholder="get input"/>
+    <h1 id ='h1_id'>javasScript</h1>
+    <h2 id="h2_id">h2 to change</h2>
+    <button onclick="changeText()">click to change </button>
+</body>
+<script>
+    function changeText(){
+    document.getElementById("h1_id").innerHTML = 'this is from js';    
+    let val= document.getElementById("input_id").value;
+    console.log(val);
+  
+   if (val==""){
+    alert('enter a value')
+   }
+   else{
+    document.getElementById("h2_id").innerHTML = val;
+   }
+    }
+</script>
+</html>
