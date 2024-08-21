@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="Style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+body{
+    background-image: url(images/back.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 679px;  
+}
+</style>    
+</head>
+<body>
+    <nav class="nav">
+        <h1>Studies</h1>
+                <ol>                    
+                    <li><a href="home.html" >Home<i class="fa fa-home"></i></a></li>
+                    <li><a href="Contact.html">Contact <i class="fa fa-phone-square"></i></a></li>
+                    <li><a href="Gallery.html">Gallery<i class="fa fa-picture-o"></i></a></li>
+                    <li><a href="Login.html">Login<i class="fa fa-sign-in"></i></a></li>
+                    <li><a href="Register.html" class="active">Register<i class="fa fa-user-plus"></i></a>
+                    </li>
+                </ol>
+            </nav>
+    <div class="register-content">       
+        <form id="registerForm">
+        
+            <label >Email</label>
+            <input type="email" id="email" name="email"  placeholder="@gmail.com" required><br><br>
+            
+            <label>Password</label>
+            <input type="password" id="password" name="password" placeholder="password" required><br><br><br>
+
+            <label>Confirm Password</label>
+            <input type="password" id="password" name="password" placeholder="password" required><br><br><br>
+            
+            <input type="button" value="Register">
+        </form>
+        </div>   
+    
+    <script>
+        document.getElementById('registerForm').addEventListener('submit', async function(event) {
+            event.preventDefault();
+        const email = document.getElementById('email').value;
+        const password = document.getElementById('password').value;
+        const response = await fetch('https://reqres.in/api/users', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ email, password })
+            });
+
+            const data = await response.json();
+            console.log('Register Response:', data);
+            
+        });
+    </script>
+</body>
+</html>

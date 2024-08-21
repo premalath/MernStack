@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <link rel="stylesheet" href="Style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Contact</title>
+</head>
+<body style="background-color: rgb(181, 112, 149);">
+    <div class="nav">
+            <h1 >Studies</h1>
+                <ol>
+                    <li><a href="home.html" >Home<i class="fa fa-home"></i></a></li>
+                    <li><a href="Contact.html" class="active">Contact <i class="fa fa-phone-square"></i></a></li>
+                    <li><a href="Gallery.html">Gallery<i class="fa fa-picture-o"></i></a></li>
+                    <li><a href="Login.html">Login<i class="fa fa-sign-in"></i></a></li>
+                    <li><a href="Register.html">Register<i class="fa fa-user-plus"></i></a></li>
+                </ol>
+        </div>   
+    
+<div class="contact-content">
+    <form name="contact"></form>
+    <label>USERNAME</label> 
+    <input type="text" id="username" placeholder="Username"  name="username"  required="required"></BR><br>
+
+    <label>EMAIL Id&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+    <input type="email" id="email"placeholder="@gmail.com"  name="email" required="required"></br><br>
+
+    <label>MESSAGE &nbsp;&nbsp;</label>
+    <textarea id="mess"  name="mess" placeholder="type your query....." required="required"></textarea></br><br>
+
+    <input type="button" onclick="printValue()" value="submit"/>  
+</form>
+</div>
+
+<script>
+    const textArray = [];
+    function printValue(){
+
+        var name=document.contact.username.value;        
+        var email=document.contact.email.value;
+        var message=document.contact.mess.value;
+
+       if(name==""||name==null)
+       {
+        alert('please enter valid username ');
+        return false;
+       }
+       else if(email=="")
+       {
+          alert('enter your email');
+          return false;
+       }
+       else if(message=="")
+       {
+        alert('enter your query');
+          return false;
+       }
+       else{
+       const text = document.getElementById('username').value;
+       const email = document.getElementById('email').value;
+       const mess = document.getElementById('mess').value;
+       
+        console.log(text);
+        console.log(email);
+        console.log(mess);
+
+        textArray.push(text);
+        textArray.push(email);
+        textArray.push(mess);
+
+        console.log(textArray);
+
+alert('message recived')
+return true;
+    }       
+}
+</script>
+</body>
+</html>

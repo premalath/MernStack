@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let personList = [{
+            "name":"prema",
+             "mobile":909078678,
+             "address":'sample',
+             "email":"premalatha@gmail.com"},
+             {            
+            "name":"latha",
+            "mobile":909078888,
+             "address":'sample1',
+             "email":"latha@gmail.com"
+        },
+            {
+            "name":"sri",
+             "mobile":909088978,
+             "address":'sample2',
+             "email":"prema@gmail.com"
+            }];
+            console.log(personList[2]['name']);
+            for (let i in  personList){
+                console.log(i,personList[i]['name']);
+            }
+    </script>
+</body>
+</html>

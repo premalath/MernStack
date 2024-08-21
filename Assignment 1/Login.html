@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body{
+    background-image: url(images/back.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 679px;   
+}
+</style>
+</head>
+<body>
+    <nav class="nav">
+        <h1>Studies</h1>
+                <ol>                    
+                    <li><a href="home.html" >Home<i class="fa fa-home"></i></a></li>
+                    <li><a href="Contact.html">Contact <i class="fa fa-phone-square"></i></a></li>
+                    <li><a href="Gallery.html">Gallery<i class="fa fa-picture-o"></i></a></li>
+                    <li><a href="Login.html"  class="active">Login<i class="fa fa-sign-in"></i></a></li>
+                    <li><a href="Register.html">Register<i class="fa fa-user-plus"></i></a>
+                    </li>
+                </ol>
+    </nav>
+            <div class="login-content">
+                <form id="loginForm" name="login">
+                
+                    <label>USERNAME</label> 
+                    <input type="text" id="username" placeholder="Username"  name="username"  required="required"></BR><br>
+                
+                    <label>PASSWORD&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                    <input type="password" id="password"placeholder="password"  name="password" required="required"></br><br>               
+                                 
+                    <input type="button" value="submit"/>  
+                </form>
+            </div>                
+      <script>
+        document.getElementById('loginForm').addEventListener('submit', async function(event) {
+            event.preventDefault();
+
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            const response = await fetch('https://reqres.in/api/users', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ username, password })
+            });
+
+            const data = await response.json();
+            console.log('Login Response:', data);
+            
+        });
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
